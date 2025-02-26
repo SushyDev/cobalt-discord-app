@@ -17,11 +17,10 @@ import (
 var (
 	GuildID        = flag.String("guild", "", "Test guild ID. If not passed - app registers commands globally")
 	AppToken       = flag.String("token", "", "Discord application access token")
-	CobaltURL      = flag.String("cobalt", "", "Base URL for Cobalt API")
+	CobaltURL      = flag.String("cobalt", "https://api.cobalt.tools", "Base URL for Cobalt API")
 	CobaltAuthKey  = flag.String("apikey", "", "API Key for Cobalt API authentication")
 	RemoveCommands = flag.Bool("rmcmd", true, "Remove all commands after shutting down or not")
 )
-
 var applicationCommands = []*discordgo.ApplicationCommand{
 	{
 		Name:        "video",

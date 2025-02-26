@@ -1,0 +1,16 @@
+services:
+  app:
+    image: cobalt-discord-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN:-}
+      - GUILD_ID=${GUILD_ID:-}
+      - COBALT_API_URL=${COBALT_API_URL:-}
+      - COBALT_API_KEY=${COBALT_API_KEY:-}
+      - REMOVE_CMD=${REMOVE_CMD:-true}
+    command: >
+      -token ${DISCORD_TOKEN}
+      -cobalt ${COBALT_API_URL}
+    restart: unless-stopped
