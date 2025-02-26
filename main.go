@@ -23,8 +23,8 @@ var (
 )
 var applicationCommands = []*discordgo.ApplicationCommand{
 	{
-		Name:        "video",
-		Description: "Download video from a social media URL",
+		Name:        "share",
+		Description: "Embed a video using cobalt.tools",
 		IntegrationTypes: &[]discordgo.ApplicationIntegrationType{discordgo.ApplicationIntegrationGuildInstall, discordgo.ApplicationIntegrationUserInstall},
 		Contexts: &[]discordgo.InteractionContextType{discordgo.InteractionContextGuild, discordgo.InteractionContextBotDM, discordgo.InteractionContextPrivateChannel},
 		Options: []*discordgo.ApplicationCommandOption{
